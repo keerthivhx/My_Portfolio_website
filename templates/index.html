@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keerthi V - AI/ML Engineer Portfolio">
+    <meta property="og:title" content="Keerthi V | AI/ML Engineer">
+    <meta property="og:description" content="AI/ML Engineering student specializing in Python, Scikit-learn, and TensorFlow.">
+    <title>Keerthi V - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">Keerthi V</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓</button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero section">
+        <div class="hero-content reveal">
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Keerthi V" class="profile-img">
+            <h1>Hi, I'm Keerthi V</h1>
+            <h2 class="typing-container">I am a <span id="typing-text"></span><span class="cursor">|</span></h2>
+            <p>AI/ML Engineer | Python | TensorFlow | Scikit-learn | NLP | Generative AI</p>
+            <p class="location">📍 Bengaluru, Karnataka, India</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/keerthi-v409955292" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/keerthivhx" target="_blank" rel="noopener">GitHub</a>
+                <a href="{{ url_for('static', filename='resume.pdf') }}" class="btn" download>Download Resume</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container reveal">
+            <h2>About Me</h2>
+            <p>AI/ML Engineering student with hands-on experience developing, training and evaluating machine learning models using Python, Scikit-learn, TensorFlow and Keras. Skilled in data preprocessing, feature engineering and building REST APIs with Flask. Exposure to Neural Networks, NLP, Generative AI and Computer Vision. Completed 3 internships and works in Agile teams.</p>
+            
+            <div class="education">
+                <h3>Education</h3>
+                <ul>
+                    <li><strong>B.E. in AI and ML</strong> - Brindavan College of Engineering, Bengaluru (Expected 2026) | CGPA: 8.55/10</li>
+                    <li><strong>PUC (PCMB)</strong> - JSS PU College (2022) | 87%</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container reveal">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="chips"><span class="chip">Python</span><span class="chip">Java</span><span class="chip">C</span></div>
+                </div>
+                <div class="skill-category">
+                    <h3>ML and DL</h3>
+                    <div class="chips"><span class="chip">Scikit-learn</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">PyTorch (familiar)</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span></div>
+                </div>
+                <div class="skill-category">
+                    <h3>Algorithms</h3>
+                    <div class="chips"><span class="chip">Decision Tree</span><span class="chip">Random Forest</span><span class="chip">Logistic Regression</span><span class="chip">K-Means</span><span class="chip">Neural Networks</span></div>
+                </div>
+                <div class="skill-category">
+                    <h3>Web and APIs</h3>
+                    <div class="chips"><span class="chip">Flask</span><span class="chip">REST APIs</span><span class="chip">HTML5</span><span class="chip">CSS3</span></div>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Viz</h3>
+                    <div class="chips"><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Excel</span></div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="chips"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Linux</span><span class="chip">Shell scripting</span><span class="chip">Jupyter</span><span class="chip">Google Colab</span></div>
+                </div>
+                <div class="skill-category">
+                    <h3>Concepts</h3>
+                    <div class="chips"><span class="chip">DSA</span><span class="chip">OOP</span><span class="chip">DBMS</span><span class="chip">SDLC</span><span class="chip">Agile</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section bg-alt">
+        <div class="container reveal">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Software Development Intern</h3>
+                        <h4>Bluestock Fintech</h4>
+                        <span class="date">Sept 2025 - Oct 2025</span>
+                        <p>Worked in an Agile team on a Python fintech application, fixed 15+ critical production bugs, applied OOP and modular design, took part in code reviews.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Web Development Intern</h3>
+                        <h4>SkillCraft Technology</h4>
+                        <span class="date">Mar 2026 - Apr 2026</span>
+                        <p>Built responsive, mobile-first interfaces with HTML5 and CSS3, optimised UI across screen sizes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Python Programming Intern</h3>
+                        <h4>CodSoft</h4>
+                        <span class="date">Nov 2024 - Dec 2024</span>
+                        <p>Built an expense tracker and automation scripts using OOP and Git.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container reveal">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>First AI Agent</h3>
+                    <p>Conversational NLP chatbot trained with TensorFlow/Keras for intent classification, served through a Flask REST API.</p>
+                    <div class="tags"><span class="chip small">TensorFlow</span><span class="chip small">Flask</span><span class="chip small">NLP</span></div>
+                    <a href="https://github.com/keerthivhx/First_Ai_Agent" target="_blank" class="btn small">GitHub Repo</a>
+                </div>
+                <div class="project-card">
+                    <h3>Cancer Detection</h3>
+                    <p>Supervised ML classification model with full preprocessing, EDA, hyperparameter tuning and evaluation.</p>
+                    <div class="tags"><span class="chip small">Scikit-learn</span><span class="chip small">ML</span></div>
+                    <a href="https://github.com/keerthivhx/Cancer_trained_data" target="_blank" class="btn small">GitHub Repo</a>
+                </div>
+                <div class="project-card">
+                    <h3>Student Performance Prediction</h3>
+                    <p>Model using Decision Tree, Random Forest and Logistic Regression with cross-validation.</p>
+                    <div class="tags"><span class="chip small">Decision Tree</span><span class="chip small">Random Forest</span></div>
+                    <a href="https://github.com/keerthivhx/student_perfamonce_trained_model" target="_blank" class="btn small">GitHub Repo</a>
+                </div>
+                <div class="project-card">
+                    <h3>SkillIt</h3>
+                    <p>AI career guidance system using Flask and Scikit-learn with a classification-based recommendation engine.</p>
+                    <div class="tags"><span class="chip small">Flask</span><span class="chip small">Scikit-learn</span></div>
+                    <span class="btn small case-study">Case Study</span>
+                </div>
+                <div class="project-card">
+                    <h3>ClassLink</h3>
+                    <p>Interactive UI application led by a 4-member Agile team.</p>
+                    <div class="tags"><span class="chip small">Agile</span><span class="chip small">UI/UX</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section bg-alt">
+        <div class="container reveal">
+            <h2>Certifications</h2>
+            <ul class="cert-list">
+                <li>IBM SkillsBuild AI Fundamentals</li>
+                <li>Google Cloud Skills Boost (Intro to Generative AI, Intro to LLMs)</li>
+                <li>Infosys Springboard (Deep Learning, NLP, Computer Vision 101, Data Science, RPA)</li>
+                <li>CodSoft Python Crash Course</li>
+                <li>Great Learning Python Fundamentals</li>
+                <li>SAP Launchpad Program</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container reveal">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:your_email@gmail.com">your_email@gmail.com</a> | Phone: +91 91130 44942</p>
+            <div class="form-container">
+                <form id="contact-form">
+                    <input type="text" name="website" id="website" class="honeypot" tabindex="-1" autocomplete="off">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" minlength="10" maxlength="2000" required></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="spinner hidden"></span>
+                    </button>
+                    <div id="form-feedback" class="hidden"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Keerthi V. Built with Flask & Vanilla JS.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

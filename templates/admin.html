@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - Keerthi V</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .dashboard { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        .msg-card { background: var(--bg-alt); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid var(--primary-color); }
+        .msg-card.read { border-left-color: var(--text-muted); opacity: 0.8; }
+        .meta { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <nav id="navbar" style="position: static;">
+        <div class="nav-content">
+            <span class="logo">Admin Dashboard</span>
+            <a href="{{ url_for('logout') }}" class="btn small">Logout</a>
+        </div>
+    </nav>
+    <div class="dashboard">
+        <h2>Messages Inbox</h2>
+        {% for msg in messages %}
+        <div class="msg-card {% if msg['is_read'] %}read{% endif %}" id="msg-{{ msg['id'] }}">
+            <h3>{{ msg['subject'] }}</h3>
+            <div class="meta">
+                From: {{ msg['name'] }} ({{ msg['email'] }}) | IP: {{ msg['ip'] }} | Date: {{ msg['created_at'] }} <br>
+                Status: Email {% if msg['email_sent'] %}✅{% else %}❌{% endif %} | Telegram {% if msg['telegram_sent'] %}✅{% else %}❌{% endif %}
+            </div>
+            <p>{{ msg['message'] }}</p>
+            {% if not msg['is_read'] %}
+            <button onclick="markRead({{ msg['id'] }})" class="btn small">Mark as Read</button>
+            {% endif %}
+        </div>
+        {% else %}
+        <p>No messages found.</p>
+        {% endfor %}
+    </div>
+    <script>
+        function markRead(id) {
+            fetch(`/admin/mark_read/${id}`, { method: 'POST' })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    location.reload();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
